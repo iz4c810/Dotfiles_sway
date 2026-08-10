@@ -4,7 +4,7 @@ My swayfx dotfiles
 ## REQUIREMENTS:
 - [x] [REQUIRED] **Fastfetch**
 - [x] [REQUIRED] **Cava**
-- [x]  **Fish** *recomended*
+- [x]  **Fish** *recommended*
 - [x] [REQUIRED] **WayBar** 
 - [x] [REQUIRED] **Wofi**
 - [ ] **Sway + SwayFX** - Window Manager *(coming soon my little munchcin)*
