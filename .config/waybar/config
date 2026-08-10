@@ -1,0 +1,80 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 34,
+    "spacing": 4,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    "modules-center": ["clock"],
+    "modules-right": [ "custom/spotify", "pulseaudio", "network", "cpu", "memory", "battery", "tray", "custom/power"],
+
+    "sway/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五"
+        }
+    },
+    "clock": {
+        "timezone": "auto",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "{:%I:%M %p}"
+    },
+    "custom/spotify": {
+    	"format": "  {}",
+    	"max-length": 40,
+    	"interval": 2,
+    	"exec": "playerctl -p spotify metadata --format '{{title}} - {{artist}}'",
+    	"exec-if": "pgrep -x spotify || pgrep -f com.spotify.Client",
+    	"on-click": "playerctl -p spotify play-pause",
+    	"on-scroll-up": "playerctl -p spotify next",
+    	"on-scroll-down": "playerctl -p spotify previous",
+    	"tooltip": false
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{icon}  {capacity}%",
+        "format-charging": "   {icon} {capacity}%",
+        "format-plugged": "  {capacity}%",
+        "format-icons": [" ", " ", " ", " ", " "]
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-ethernet": "    {ipaddr}/{cidr}",
+        "format-disconnected": "    Disconnected"
+    },
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-muted": "    Muted",
+        "format-icons": {
+            "default": ["  ", "  ", "  "]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "⏻",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "/home/tito/.config/waybar/powermenu.xml",
+        "menu-actions": {
+            "shutdown": "shutdown now",
+            "reboot": "reboot",
+            "logout": "swaymsg exit"
+        }
+    }
+}
