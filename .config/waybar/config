@@ -69,6 +69,7 @@
     "custom/power": {
         "format": "⏻",
         "tooltip": false,
+        "type": "menu",
         "menu": "on-click",
         "menu-file": "$HOME/.config/waybar/powermenu.xml",
         "menu-actions": {
