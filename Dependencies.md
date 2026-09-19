@@ -6,3 +6,4 @@
 6. [x] Wofi
 7. [x] Sway + SwayFX
 8. [ ] Hyprland [config] [not recomended]
+9. [ ] {Hyprland Dependency} QuickShell [not recomended]
