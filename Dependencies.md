@@ -5,5 +5,6 @@
 5. [x] WayBar
 6. [x] Wofi
 7. [x] Sway + SwayFX
-8. [ ] Hyprland [config] [not recomended]
-9. [ ] {Hyprland Dependency} QuickShell [not recomended]
+8. [x] TTF-JetBrains-Mono-Font (for starship and fastfetch)
+9. [ ] Hyprland [config] [not recomended]
+10. [ ] {Hyprland Dependency} QuickShell [not recomended]
